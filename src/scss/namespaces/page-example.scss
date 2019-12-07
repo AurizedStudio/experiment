@@ -1,0 +1,541 @@
+/* ==================================================
+   page-example.html
+ ================================================== */
+.wrap {
+	width: 100%;
+	padding: 0 14px;
+	@include media-pc {
+		width: $width-pc;
+		margin: 0 auto;
+	}
+}
+/* --------------------------------------------------
+   メニュー全体
+ -------------------------------------------------- */
+.menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 75px;
+	background-color: #efefef;
+	z-index: $zindex-menu;
+	@include media-tab {
+		height: auto;
+		background-color: #fff;
+	}
+}
+/* --------------------------------------------------
+   メニューボタン
+ -------------------------------------------------- */
+.menu-btn {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 52px;
+	height: 52px;
+	padding: 0;
+	background-color: #fff;
+	border: none;
+	&:hover {
+		cursor: pointer;
+	}
+	@include media-tab {
+		display: none;
+	}
+}
+.menu-btn_line {
+	display: inline-block;
+	position: absolute;
+	left: 5px;
+	width: 40px;
+	height: 2px;
+	background-color: $link-color;
+	&:nth-child(1){
+		top: 16px;
+	}
+	&:nth-child(2){
+		top: 25px;
+	}
+	&:nth-child(3){
+		top: 34px;
+	}
+}
+/* --------------------------------------------------
+  メインナビゲーション
+-------------------------------------------------- */
+.gnav {
+	&[aria-hidden]{
+		transition: visibility .2s;
+		.gnav-backdrop {
+			transition: opacity .2s;
+		}
+		ul {
+			transition: transform .2s;
+		}
+	}
+	//	&[aria-expanded="true"]{ // debugモード 読み込み時オープン
+	&[aria-hidden="false"]{ // 開いているとき
+		visibility: visible;
+		.gnav-backdrop {
+			opacity: 1;
+		}
+		ul {
+			transform: translate( calc(100% - 72%),0);
+			@include media-tab { // タブレット以上では強制０位置へ
+				transform: translate(0,0);
+			}
+		}
+	}
+//	&[aria-expanded="false"]{ // debugモード 読み込み時オープン
+	&[aria-hidden="true"]{ // 閉じているとき
+		visibility: hidden;
+		height: 1px;
+		@include media-tab { // タブレット以上では強制表示
+			visibility: visible;
+			height: auto;
+		}
+		.gnav-backdrop {
+			opacity: 0;
+		}
+		ul {
+			transform: translate( calc(100% + 28%),0);
+			@include media-tab { // タブレット以上では強制表示
+				transform: translate(0,0);
+			}
+		}
+	}
+	ul {
+		@include list-unstyled;
+		margin: 0;
+		position: relative;
+		top: 76px;
+		width: 78%;
+		max-height: calc(100vh - 140px);
+		background-color: #3d3d3d;
+		color: #fff;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		@include media-tab {
+			display: flex;
+			position: static;
+			width: auto;
+			max-height: none;
+			background-color: transparent;
+			color: #000;
+			overflow: visible;
+		}
+	}
+	li {
+		border-bottom: 1px solid #fff;
+		@include media-tab {
+			flex: 1 0 (100% / 5);
+			text-align: center;
+			border-bottom: none;
+		}
+	}
+	a {
+		display: block;
+		padding: 14px 10px;
+		background-color: $link-color;
+		color: #fff;
+		@include media-tab {
+			padding: 10px 0;
+			background-color: transparent;
+			color: $link-color;
+		}
+		&:hover,
+		&:focus {
+			background-color: $link-hover-color;
+			text-decoration: none;
+			@include media-tab {
+				background-color: transparent;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+/* --------------------------------------------------
+   バックドロップ
+ -------------------------------------------------- */
+.gnav-backdrop {
+	position: fixed;
+	top: 76px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.75);
+	@include media-tab {
+		display: none;
+	}
+}
+/* --------------------------------------------------
+   メイン
+ -------------------------------------------------- */
+.main {
+	.page-example & {
+		margin: 70px 0 0 0;
+	}
+}
+/* --------------------------------------------------
+   タブパネル
+ -------------------------------------------------- */
+.tab-content {
+	> .tab-content_pane {
+	  display: none;
+	}
+	> .active {
+	  display: block;
+	}
+}
+/* --------------------------------------------------
+   下線リンク
+ -------------------------------------------------- */
+.underlink {
+	position: relative;
+	&:after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: #0275d8;
+		transition: width .3s ease-in;
+	}
+	&:hover {
+		text-decoration: none;
+		&:after {
+			width: 100%;
+		}
+	}
+}
+/* --------------------------------------------------
+   コインアルバム
+ -------------------------------------------------- */
+.coin-album { // <ul>
+	@include list-unstyled;
+	display: grid;
+	grid-template-rows: repeat(2,1fr);
+	grid-template-columns: repeat(4,1fr);
+	margin: 0;
+	padding: 0;
+	gap: 24px;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+.coin-album02 {
+	@include list-unstyled;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+//	grid-template-columns: repeat(auto-fill, 100px);
+	gap: 10px;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+/* --------------------------------------------------
+   ボタン
+ -------------------------------------------------- */
+.btn-effect { // <button>
+	display: inline-block;
+	position: relative;
+	width: 230px;
+	height: 100px;
+	padding: 0;
+	background-color: #a17923;
+	border: none;
+	border-radius: 4px;
+	overflow: hidden;
+	&:hover,
+	&:active {
+		.btn-effect_effect {
+			transform: translateX(0);
+		}
+	}
+}
+.btn-effect_effect {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background-color: rgba(0,0,0,.25);
+	transform: translateX(-100%);
+	transition: transform .3s ease-out;
+}
+.btn-effect_txt {
+	color: #fff;
+	font-size: 2rem;
+}
+/* --------------------------------------------------
+   コインアルバム getJSON
+ -------------------------------------------------- */
+.is-album {
+	@include list-unstyled;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+	gap: 20px;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+/* --------------------------------------------------
+   背景イメージホバー拡大
+ -------------------------------------------------- */
+.bg-img-hover { // <a>
+	display: block;
+	width: 300px;
+	&:hover {
+		.bg-img-hover_img {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+.bg-img-hover_img {
+	margin: 0;
+	width: 300px;
+	height: 218px;
+	overflow: hidden;
+	img {
+		transition: transform .3s;
+	}
+}
+.bg-img-hover_txt {
+	margin: 4px 0 0 0;
+}
+/* --------------------------------------------------
+   スクロールフェードイン
+ -------------------------------------------------- */
+.scroll-fade-in { // <ul>
+	@include list-unstyled;
+	li {
+		padding: 20px 0;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+.scroll-fade-in_reveal01,
+.scroll-fade-in_reveal02 {
+	opacity: 0;
+	transform: scale(.9);
+	transition: all .5s ease-in-out;
+	&.visible {
+		opacity: 1;
+		transform: none;
+	}
+}
+/* --------------------------------------------------
+   flexbox要素並べ
+ -------------------------------------------------- */
+.eleflexs { // <ul>
+	@include list-unstyled;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 0 -1em;
+	border: 1px solid grey;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+.eleflexs-item {
+	flex: 0 0 auto;
+	width: 25%;
+	margin: 0 0 0 1em;
+}
+/* --------------------------------------------------
+   アコーディオン
+ -------------------------------------------------- */
+.acc {
+
+}
+.acc_cont {
+	display: none;
+	img {
+		width: 290px;
+		height: auto;
+	}
+}
+/* --------------------------------------------------
+   ページトップへ戻る
+ -------------------------------------------------- */
+.pagetop {
+	display: none;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+}
+
+/* --------------------------------------------------
+   角丸マウスホバー
+ -------------------------------------------------- */
+.border {
+	position: relative;
+	width: 200px;
+	overflow: hidden;
+	border-radius: 10px;
+	z-index: 2; // for Safari
+	img {
+		transition: transform .2s;
+	}
+	&:hover {
+		cursor: pointer;
+		img {
+			transform: scale(1.2);
+		}
+	}
+}
+
+/* --------------------------------------------------
+   斜めベタ背景
+ -------------------------------------------------- */
+.diagonal {
+	height: 100px;
+	background: linear-gradient(175deg, #A663CC, #A663CC 55%, #6F2DBD calc(55% + 1px), #6F2DBD 100%);
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* --------------------------------------------------
+   2つのリンク 離れた箇所と連携
+ -------------------------------------------------- */
+.two-link {
+	position: relative;
+	padding: 0 400px 0 0;
+	p {
+		margin: 0;
+	}
+}
+.two-link_link01 {
+	color: #a663cc;
+	&:after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 20px;
+		right: 40px;
+		width: 100px;
+		height: 100px;
+		background-color: currentColor;
+		opacity: .85;
+		transition: transform .5s, opacity .5s;
+	}
+	&:hover:after {
+		transform: scale(1.2);
+		transform: rotate(10deg);
+		opacity: 1;
+	}
+}
+.two-link_link02 {
+	color: #6f2dbd;
+	&:after {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 40px;
+		right: 100px;
+		width: 100px;
+		height: 100px;
+		background-color: currentColor;
+		opacity: .85;
+		transition: transform .5s, opacity .5s;
+	}
+	&:hover:after {
+		transform: scale(1.2);
+		transform: rotate(10deg);
+		opacity: 1;
+	}
+}
+
+.card {
+	@include media-tab {
+		display: flex;
+		justify-content: space-between;
+	}
+	@include media-pc {
+		justify-content: flex-start;
+	}
+}
+.card_item01 {
+	position: relative;
+	@include media-tab {
+		flex: 0 1 45%;
+	}
+	@include media-pc {
+		flex: 0 1 310px;
+	}
+}
+.card_item02 { // <a>
+	display: block;
+	position: relative;
+	color: $body-color;
+	@include media-tab {
+		flex: 0 1 45%;
+	}
+	@include media-pc {
+		flex: 0 1 310px;
+		margin: 0 0 0 20px;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity .5s ease-out;
+	}
+	&:hover {
+		color: $body-color;
+		text-decoration: none;
+		&:after {
+			background-color: khaki;
+			opacity: .2;
+		}
+	}
+}
+.card_fig {
+	margin: 0;
+	text-align: center;
+	img {
+		max-width: 310px;
+		height: auto;
+	}
+}
+.card_exp {
+}
+.card_more {
+	display: block;
+	width: 2em;
+	margin: 0 0 0 auto;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity .5s ease-out;
+	}
+	&:hover {
+		&:after {
+			background-color: khaki;
+			opacity: .2;
+		}
+	}
+}

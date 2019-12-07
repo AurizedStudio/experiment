@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>{% block title %}{% endblock %}</title>
+<meta name="description" content="{% block description %}{% endblock %}">
+<meta property="og:title" content="{% block ogtitle %}{% endblock %}">
+<meta property="og:type" content="{% block ogtype %}{% endblock %}">
+<meta property="og:url" content="{% block ogurl %}{% endblock %}">
+<meta property="og:description" content="{% block ogdescription %}{% endblock %}">
+<meta property="og:site_name" content="{% block ogsitename %}{% endblock %}">
+<meta property="og:image" content="{% block ogimage %}{% endblock %}">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'dwj8cob',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+</head>
+<body class="{{bodyClass}}">
+
+{% if bodyClass == 'page-example' %}
+{% include 'module/_head1.html' %}
+{% endif %}
+
+<div class="wrap">
+
+{% if bodyClass == 'page-example2' %}
+{% include 'module/_head2.html' %}
+{% endif %}
+
+<main class="main">
+{% block main %}
+{% endblock %}
+</main>
+
+{% include 'module/_foot.html' %}
+
+</div>
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/device.js"></script>
+{% if bodyClass == 'page-example' %}
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/ScrollMagic.js"></script>
+<script src="/js/debug.addIndicators.js"></script>
+<script src="/js/style.js"></script>
+{% endif %}
+{% if bodyClass == 'page-example2' %}
+<!-- <script src="/js/style2.js"></script> -->
+<!-- <script src="/js/style3.js"></script> -->
+<script src="/js/style4.js"></script>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>expampleページ</title>
+<meta name="description" content="expampleページの説明">
+<meta property="og:title" content="">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="">
+<meta property="og:image" content="https://">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'dwj8cob',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+</head>
+<body class="page-example">
+<nav class="menu" role="navigation" aria-lable="メインナビ">
+	<div class="menu-inner">
+		<button type="button" class="menu-btn" aria-haspopup="true" aria-controls="navi" aria-expanded="false">
+			<span class="menu-btn_line"></span><span class="menu-btn_line"></span><span class="menu-btn_line"></span>
+		</button>
+		<div class="gnav" id="navi" aria-hidden="true">
+			<div class="gnav-backdrop"></div>
+			<ul>
+				<li><a href="#">グロナビメニュー１</a></li>
+				<li><a href="#">メニュー２</a></li>
+				<li><a href="#">メニュー３</a></li>
+				<li><a href="#">メニュー４</a></li>
+				<li><a href="#">メニュー５</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="wrap">
+<main class="main">
+<h1>page-example</h1>
+<p>page-exampleのメインコンテンツ1</p>
+<p>page-exampleのメインコンテンツ2</p>
+<p>page-exampleのメインコンテンツ3</p>
+<p>page-exampleのメインコンテンツ4</p>
+<p>page-exampleのメインコンテンツ5</p>
+<?php
+	echo '<h2>初級</h2>';
+	echo 5 + 7;
+?>
+<p><a href="https://www.instagram.com/p/B4I_HOaAxRv/?igshid=nfn3ej276vpt" class="underlink">リンク下線</a></p>
+<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">モーダル起動</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+        <button type="button" class="btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<p>page-exampleのメインコンテンツ6</p>
+<p>page-exampleのメインコンテンツ7</p>
+<p>page-exampleのメインコンテンツ8</p>
+<!-- Nav tabs -->
+<ul class="nav" role="tablist">
+  <li class="nav_item">
+    <a class="nav_link active" id="nav_home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav_item">
+    <a class="nav_link" id="nav_profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+  </li>
+  <li class="nav_item">
+    <a class="nav_link" id="nav_message-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+  </li>
+  <li class="nav_item">
+    <a class="nav_link" id="nav_settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+  </li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-content_pane active" id="home" role="tabpanel" aria-labelledby="nav_home-tab">Home</div>
+  <div class="tab-content_pane" id="profile" role="tabpanel" aria-labelledby="nav_profile-tab">Profile<br>profile</div>
+  <div class="tab-content_pane" id="messages" role="tabpanel" aria-labelledby="nav_message-tab">Messages<br>message<br>message</div>
+  <div class="tab-content_pane" id="settings" role="tabpanel" aria-labelledby="nav_settings-tab">Settings<br>settings<br>settings<br>setting</div>
+</div>
+<h2>Grid</h2>
+<ul class="coin-album">
+	<li class="coin-album_item"><img src="/img/09061152_5b90965639e40.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061152_5b90966435647.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061405_5b90b5a8372e2.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061405_5b90b59a75b0d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171144_5da7d5a82a4d4.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171144_5da7d5984ab0d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171220_5da7de0f89b4d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171221_5da7de1e09365.png" alt=""></li>
+</ul>
+<h2>ボタン</h2>
+<button type="button" class="btn-effect">
+	<span class="btn-effect_effect"></span>
+	<span class="btn-effect_txt">More</span>
+</button>
+<h2>Grid</h2>
+<ul class="coin-album02">
+	<li class="coin-album_item"><img src="/img/09061152_5b90965639e40.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061152_5b90966435647.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061405_5b90b5a8372e2.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061405_5b90b59a75b0d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171144_5da7d5a82a4d4.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171144_5da7d5984ab0d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171220_5da7de0f89b4d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171221_5da7de1e09365.png" alt=""></li>
+</ul>
+<h2>JSON読み込み</h2>
+<ul class="is-album"></ul>
+<h2>背景イメージホバー</h2>
+<a href="#" class="bg-img-hover">
+	<p class="bg-img-hover_img"><img src="/img/01200031_5a620f4129fb4.jpg" alt=""></p>
+	<p class="bg-img-hover_txt">ドイツ パッサウ 1761年 Sede Vacante 銀貨 都市景観 NGC MS62</p>
+</a>
+<h2>パララックス</h2>
+<ul class="scroll-fade-in">
+	<li class="scroll-fade-in_trigger01">
+		<figure class="scroll-fade-in_reveal01 visible">
+			<img src="/img/10171220_5da7de0f89b4d.png" alt="">
+			<figcaption>イギリス 1887年 ソブリン 金貨 ヴィクトリア ジュビリーヘッド NGC PF63UC オモテ面</figcaption>
+		</figure>
+	</li>
+	<li class="scroll-fade-in_trigger02">
+		<figure class="scroll-fade-in_reveal02 visible">
+			<img src="/img/10171221_5da7de1e09365.png" alt="">
+			<figcaption>イギリス 1887年 ソブリン 金貨 ヴィクトリア ジュビリーヘッド NGC PF63UC ウラ面</figcaption>
+		</figure>
+	</li>
+	<li>
+		<figure>
+			<img src="/img/10171144_5da7d5984ab0d.png" alt="">
+			<figcaption>イギリス 1826年 1/2ソブリン 金貨 ジョージ4世 NGC PF63CAMEO オモテ面</figcaption>
+		</figure>
+	</li>
+</ul>
+<h2>アコーディオン</h2>
+<div class="acc">
+	<div class="acc_item">
+		<button class="acc_title" type="button" aria-expanded="false">ドイツ ハンブルク 1863年 ポルトガレッサー銀打ち 聖ニコライ教会 NGC MS62</button>
+		<div class="acc_cont" aria-hidden="true">
+			<img src="/img/05131054_5cd8ce57bf01c.png" alt="コイン画像">
+		</div>
+	</div>
+	<div class="acc_item">
+		<button class="acc_title" type="button" aria-expanded="false">ドイツ ハンブルク 1826年 銀打ちポルトガレッサー</button>
+		<div class="acc_cont" aria-hidden="true">
+			<img src="/img/05211658_5ce3afb5cdaac.png" alt="コイン画像">
+		</div>
+	</div>
+	<div class="acc_item">
+		<button class="acc_title" type="button" aria-expanded="false">ドイツ ハンブルク 1826年 銅メダル 女神立像</button>
+		<div class="acc_cont" aria-hidden="true">
+			<img src="/img/04231349_5cbe99615bc1d.png" alt="コイン画像">
+		</div>
+	</div>
+</div>
+<h2>Flexで要素並べ</h2>
+<ul class="eleflexs">
+	<li class="eleflexs-item">
+		<figure>
+			<img src="/img/05131054_5cd8ce57bf01c.png" alt="">
+			<figcaption>ドイツ ハンブルク 1863年 ポルトガレッサー銀打ち 聖ニコライ教会 NGC MS62</figcaption>
+		</figure>
+	</li>
+	<li class="eleflexs-item">
+		<figure>
+			<img src="/img/05211658_5ce3afb5cdaac.png" alt="">
+			<figcaption>ドイツ ハンブルク 1826年 銀打ちポルトガレッサー</figcaption>
+		</figure>
+	</li>
+	<li class="eleflexs-item">
+		<figure>
+			<img src="/img/04231349_5cbe99615bc1d.png" alt="">
+			<figcaption>ドイツ ハンブルク 1826年 銅メダル 女神立像</figcaption>
+		</figure>
+	</li>
+	<li class="eleflexs-item">
+		<figure>
+			<img src="/img/09261043_5d8c17dfbb307.png" alt="">
+			<figcaption>ドイツ ハンブルク 1888年 1/2ポルトガレーザー 銀打ちメダル 市庁舎拡張記念</figcaption>
+		</figure>
+	</li>
+	<li class="eleflexs-item">
+		<figure>
+			<img src="/img/11111350_5dc8e8ab4fca3.png" alt="">
+			<figcaption>ハンブルク 1888年 1/2ポルトガレッサー 金銀ギルトメダル3枚 市庁舎拡張記念 SP62～64</figcaption>
+		</figure>
+	</li>
+	<li class="eleflexs-item">
+		<figure>
+			<img src="/img/11111438_5dc8f3e9cd33c.png" alt="">
+			<figcaption>ドイツ ハンブルク 1879年 ポルトガレッサー(金メダル) ヨハネウム学院350周年 MS62</figcaption>
+		</figure>
+	</li>
+	<li class="eleflexs-item">
+		<figure>
+			<img src="/img/11111439_5dc8f3f8b6b53.png" alt="">
+			<figcaption>ドイツ ハンブルク 1879年 ポルトガレッサー(金メダル) ヨハネウム学院350周年</figcaption>
+		</figure>
+	</li>
+</ul>
+<h2>斜めベタ背景</h2>
+<div class="diagonal"></div>
+<h2>ページトップへ戻るボタン</h2>
+<button class="pagetop" type="button">ページトップ</button>
+<h2>角丸マウスホバー</h2>
+<div class="border"><img src="/img/06201542_5d0b2ad8eca96.png" alt=""></div>
+<h2>2つのリンク 離れた箇所と連携</h2>
+<div class="two-link">
+	<p><a class="two-link_link01" href="https://www.ulmer-muenster.de/">ウルム大聖堂(ウルムだいせいどう、ドイツ語: Ulmer Münster)</a>は、ドイツの<a class="two-link_link02" href="https://www.baden-wuerttemberg.de/de/startseite/">バーデン=ヴュルテンベルク州</a>ウルムにあるゴシック様式の大聖堂。ルター派のヴュルテンベルク福音主義州教会に属している。<br>
+	尖塔を含めて高さが162メートルほどあり(正確には161.53メートル)、現在でも教会堂建築としては世界一の高さである。展望台が141メートル地点に設けてあり、768段の階段で上がることも可能。</p>
+</div>
+<h2>カード リンク領域拡張</h2>
+<div class="card">
+	<div class="card_item01">
+		<figure class="card_fig">
+			<img src="/img/11281940_5a1d3d094f13c.jpg" alt="外観">
+			<figcaption>ケルン大聖堂</figcaption>
+		</figure>
+		<div class="card_exp">
+			<p>ドイツのケルンにあるゴシック様式の大聖堂。正式名称は、ザンクト・ペーター・ウント・マリア大聖堂。(聖ペトロとマリア大聖堂の意)。</p>
+			<p>ゴシック様式の建築物としては世界最大であり、ローマ・カトリック教会のミサがおこなわれている。</p>
+			<p>メダルに描かれているケルン大聖堂は現存の大聖堂であり、3代目。</p>
+			<p>2代目が焼失した年である1248年に建設がはじまり、紆余曲折をへて全てが完成したのは建設開始から600年以上が経過した1880年である。</p>
+			<p>ウルム大聖堂と並び、ドイツの2大大聖堂として観光客にも人気の大聖堂です。</p>
+		</div>
+		<a href="#" class="card_more">詳細</a>
+	</div>
+	<a class="card_item02" href="#">
+		<figure class="card_fig">
+			<img src="/img/11281940_5a1d3d094f13c.jpg" alt="外観">
+			<figcaption>ケルン大聖堂</figcaption>
+		</figure>
+		<div class="card_exp">
+			<p>ドイツのケルンにあるゴシック様式の大聖堂。正式名称は、ザンクト・ペーター・ウント・マリア大聖堂。(聖ペトロとマリア大聖堂の意)。</p>
+			<p>ゴシック様式の建築物としては世界最大であり、ローマ・カトリック教会のミサがおこなわれている。</p>
+			<p>メダルに描かれているケルン大聖堂は現存の大聖堂であり、3代目。</p>
+			<p>2代目が焼失した年である1248年に建設がはじまり、紆余曲折をへて全てが完成したのは建設開始から600年以上が経過した1880年である。</p>
+			<p>ウルム大聖堂と並び、ドイツの2大大聖堂として観光客にも人気の大聖堂です。</p>
+		</div>
+	</a>
+</div>
+</main>
+<footer class="mt20">
+	<p>フッターコンテンツ</p>
+</footer>
+</div>
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/device.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/ScrollMagic.js"></script>
+<script src="/js/debug.addIndicators.js"></script>
+<script src="/js/style.js"></script>
+</body>
+</html>
