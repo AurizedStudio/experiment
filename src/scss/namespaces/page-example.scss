@@ -459,6 +459,9 @@
 	}
 }
 
+/* --------------------------------------------------
+   カードリンク拡張領域
+ -------------------------------------------------- */
 .card {
 	@include media-tab {
 		display: flex;
@@ -536,6 +539,33 @@
 		&:after {
 			background-color: khaki;
 			opacity: .2;
+		}
+	}
+}
+
+/* --------------------------------------------------
+   リンクアイコン
+ -------------------------------------------------- */
+.link-icon { // <ul>
+	margin: 0;
+	padding: 0;
+	li {
+		@include list-unstyled;
+		margin: 4px 0 0 0;
+		padding: 0 0 0 28px;
+		text-indent: -28px;
+	}
+	a[href$=".pdf"] {
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			margin: -18px 4px -6px 0;
+			background-image: url(/img/pdf.svg);
+			background-repeat: no-repeat;
+			background-size: 24px 24px;
+
 		}
 	}
 }

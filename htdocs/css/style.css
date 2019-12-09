@@ -1182,6 +1182,9 @@ select.form-control:focus::-ms-value {
           transform: rotate(10deg);
   opacity: 1;
 }
+/* --------------------------------------------------
+   カードリンク拡張領域
+ -------------------------------------------------- */
 @media (min-width: 768px) {
   .card {
     display: flex;
@@ -1267,6 +1270,30 @@ select.form-control:focus::-ms-value {
 .card_more:hover:after {
   background-color: khaki;
   opacity: .2;
+}
+/* --------------------------------------------------
+   リンクアイコン
+ -------------------------------------------------- */
+.link-icon {
+  margin: 0;
+  padding: 0;
+}
+.link-icon li {
+  padding-left: 0;
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0 0 0 28px;
+  text-indent: -28px;
+}
+.link-icon a[href$=".pdf"]::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: -18px 4px -6px 0;
+  background-image: url(/img/pdf.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
 }
 /* ==================================================
    page-example2.html （アニメーション/Grid 確認用）
