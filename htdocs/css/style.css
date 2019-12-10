@@ -1295,6 +1295,25 @@ select.form-control:focus::-ms-value {
   background-repeat: no-repeat;
   background-size: 24px 24px;
 }
+/* --------------------------------------------------
+   罫線
+ -------------------------------------------------- */
+.ruled-line {
+  display: flex;
+  align-items: center;
+}
+.ruled-line::before, .ruled-line::after {
+  content: '';
+  height: 2px;
+  background-color: #c5c5c5;
+  flex: 1 0 auto;
+}
+.ruled-line::before {
+  margin: 0 8px 0 0;
+}
+.ruled-line::after {
+  margin: 0 0 0 8px;
+}
 /* ==================================================
    page-example2.html （アニメーション/Grid 確認用）
  ================================================== */

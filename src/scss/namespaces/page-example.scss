@@ -569,3 +569,25 @@
 		}
 	}
 }
+
+/* --------------------------------------------------
+   罫線
+ -------------------------------------------------- */
+.ruled-line {
+	display: flex;
+	align-items: center;
+	&::before,
+	&::after {
+		content: '';
+		height: 2px;
+		background-color: #c5c5c5;
+		flex: 1 0 auto;
+	}
+	&::before {
+		margin: 0 8px 0 0;
+	}
+	&::after {
+		margin: 0 0 0 8px;
+	}
+}
+
