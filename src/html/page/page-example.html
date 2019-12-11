@@ -19,10 +19,6 @@
 <p>page-exampleのメインコンテンツ3</p>
 <p>page-exampleのメインコンテンツ4</p>
 <p>page-exampleのメインコンテンツ5</p>
-<?php
-	echo '<h2>初級</h2>';
-	echo 5 + 7;
-?>
 
 
 <p><a href="https://www.instagram.com/p/B4I_HOaAxRv/?igshid=nfn3ej276vpt" class="underlink">リンク下線</a></p>
@@ -218,6 +214,17 @@
 	尖塔を含めて高さが162メートルほどあり(正確には161.53メートル)、現在でも教会堂建築としては世界一の高さである。展望台が141メートル地点に設けてあり、768段の階段で上がることも可能。</p>
 </div>
 
+<h2>モーダル target擬似クラス使用</h2>
+<a href="#modal" id="modal01" aria-label="Open Modal">モーダル click here</a>
+<div id="modal">
+	<a href="#modal01" class="modal_overlay" aria-label="Close Modal"></a>
+	<div class="modal_content">
+		<h3>モーダルコンテンツ</h3>
+		<p>コンテンツ<br>コンテンツ<br>コンテンツ</p>
+		<a href="#modal01" aria-label="Close Modal">Close</a>
+	</div>
+</div>
+
 <h2>カード リンク領域拡張</h2>
 <div class="card">
 	<div class="card_item01">
@@ -254,7 +261,7 @@
 
 <h2>リンクアイコン</h2>
 <ul class="link-icon">
-	<li><a href="###.pdf">PDFリンク<br>PDFPDFPDFPDFPDF</a></li>
+	<li><a href="4321.pdf">PDFリンク<br>PDFPDFPDFPDFPDF</a></li>
 	<li><a href="1234.pdf">PDFリンク</a></li>
 </ul>
 
