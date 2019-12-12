@@ -614,7 +614,7 @@
 		visibility: visible;
 	}
 }
-.modal_overlay {
+.modal_overlay { // <a>
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -622,7 +622,12 @@
 	height: 100%;
 }
 .modal_content {
+	position: relative; // コンテンツ内選択可能にする
 	width: 70%;
 	background-color: #fff;
 	padding: 20px;
+}
+.modal-scroll-stop { // <html>,<body> スクロールさせない
+	overflow: hidden;
+	height: 100%;
 }

@@ -1345,9 +1345,14 @@ select.form-control:focus::-ms-value {
   height: 100%;
 }
 .modal_content {
+  position: relative;
   width: 70%;
   background-color: #fff;
   padding: 20px;
+}
+.modal-scroll-stop {
+  overflow: hidden;
+  height: 100%;
 }
 /* ==================================================
    page-example2.html （アニメーション/Grid 確認用）

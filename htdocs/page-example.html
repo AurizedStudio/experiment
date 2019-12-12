@@ -55,30 +55,6 @@
 <p>page-exampleのメインコンテンツ4</p>
 <p>page-exampleのメインコンテンツ5</p>
 <p><a href="https://www.instagram.com/p/B4I_HOaAxRv/?igshid=nfn3ej276vpt" class="underlink">リンク下線</a></p>
-<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">モーダル起動</button>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn" data-dismiss="modal">Close</button>
-        <button type="button" class="btn">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<p>page-exampleのメインコンテンツ6</p>
-<p>page-exampleのメインコンテンツ7</p>
-<p>page-exampleのメインコンテンツ8</p>
 <!-- Nav tabs -->
 <ul class="nav" role="tablist">
   <li class="nav_item">
@@ -112,6 +88,38 @@
 	<li class="coin-album_item"><img src="/img/10171220_5da7de0f89b4d.png" alt=""></li>
 	<li class="coin-album_item"><img src="/img/10171221_5da7de1e09365.png" alt=""></li>
 </ul>
+<h2>モーダル</h2>
+<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">モーダル起動</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+        <button type="button" class="btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>モーダル target擬似クラス使用</h2>
+<a href="#modal" id="modal01" class="is-modal-open" aria-label="Open Modal">モーダル click here</a>
+<div id="modal">
+	<a href="#modal01" class="modal_overlay is-modal-close01" aria-label="Close Modal"></a>
+	<div class="modal_content">
+		<h3>モーダルコンテンツ</h3>
+		<p>コンテンツ<br>コンテンツ<br>コンテンツ</p>
+		<a href="#modal01" aria-label="Close Modal" class="is-modal-close02">Close</a>
+	</div>
+</div>
 <h2>ボタン</h2>
 <button type="button" class="btn-effect">
 	<span class="btn-effect_effect"></span>
@@ -232,16 +240,6 @@
 <div class="two-link">
 	<p><a class="two-link_link01" href="https://www.ulmer-muenster.de/">ウルム大聖堂(ウルムだいせいどう、ドイツ語: Ulmer Münster)</a>は、ドイツの<a class="two-link_link02" href="https://www.baden-wuerttemberg.de/de/startseite/">バーデン=ヴュルテンベルク州</a>ウルムにあるゴシック様式の大聖堂。ルター派のヴュルテンベルク福音主義州教会に属している。<br>
 	尖塔を含めて高さが162メートルほどあり(正確には161.53メートル)、現在でも教会堂建築としては世界一の高さである。展望台が141メートル地点に設けてあり、768段の階段で上がることも可能。</p>
-</div>
-<h2>モーダル target擬似クラス使用</h2>
-<a href="#modal" id="modal01" aria-label="Open Modal">モーダル click here</a>
-<div id="modal">
-	<a href="#modal01" class="modal_overlay" aria-label="Close Modal"></a>
-	<div class="modal_content">
-		<h3>モーダルコンテンツ</h3>
-		<p>コンテンツ<br>コンテンツ<br>コンテンツ</p>
-		<a href="#modal01" aria-label="Close Modal">Close</a>
-	</div>
 </div>
 <h2>カード リンク領域拡張</h2>
 <div class="card">
