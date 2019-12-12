@@ -111,3 +111,27 @@ $(function(){
 		}
 	})
 });
+
+/* ==================================================
+   モーダル target擬似クラス使用
+ ================================================== */
+$(function(){
+	var flag = false;
+	$('.is-modal-close01, .is-modal-close02').on('click', function(){
+		modalToggle();
+	})
+	$('.is-modal-open').on('click', function(){
+		modalToggle();
+	})
+	function modalToggle() {
+		if (flag) { // modal close
+			$('html, body').removeClass('modal-scroll-stop');
+			flag = false;
+			console.log(flag);
+		} else { // modal open
+			$('html, body').addClass('modal-scroll-stop');
+			flag = true;
+			console.log(flag);
+		}
+	}
+});
