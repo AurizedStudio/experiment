@@ -866,7 +866,7 @@ select.form-control:focus::-ms-value {
   display: block;
 }
 /* --------------------------------------------------
-   下線リンク
+   リンク下線
  -------------------------------------------------- */
 .underlink {
   position: relative;
@@ -887,6 +887,20 @@ select.form-control:focus::-ms-value {
 }
 .underlink:hover:after {
   width: 100%;
+}
+/* --------------------------------------------------
+   カラー currentColor
+ -------------------------------------------------- */
+.link-current {
+  color: #6f2dbd;
+}
+.link-current a {
+  color: currentColor;
+  border: 4px solid;
+  transition: color .5s;
+}
+.link-current a:hover {
+  color: #0275d8;
 }
 /* --------------------------------------------------
    コインアルバム
