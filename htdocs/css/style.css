@@ -903,6 +903,42 @@ select.form-control:focus::-ms-value {
   color: #0275d8;
 }
 /* --------------------------------------------------
+   Floating label
+ -------------------------------------------------- */
+.floating-label {
+  position: relative;
+}
+.floating-label input {
+  padding: 6px;
+  border: 1px solid;
+  font-size: 1.125rem;
+}
+.floating-label input:focus {
+  padding: 10px 6px 2px 6px;
+  box-shadow: 0 0 0 1px #000;
+  outline: none;
+}
+.floating-label input:required:valid {
+  padding: 10px 6px 2px 6px;
+}
+.floating-label input:focus + label,
+.floating-label input:required:valid + label {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  font-size: 0.625rem;
+}
+.floating-label label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #555;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: font-size .2s ease-out, -webkit-transform .2s ease-out;
+  transition: font-size .2s ease-out, transform .2s ease-out;
+  transition: font-size .2s ease-out, transform .2s ease-out, -webkit-transform .2s ease-out;
+}
+/* --------------------------------------------------
    コインアルバム
  -------------------------------------------------- */
 .coin-album {

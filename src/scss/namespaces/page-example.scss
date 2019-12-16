@@ -228,6 +228,39 @@
 	}
 }
 /* --------------------------------------------------
+   Floating label
+ -------------------------------------------------- */
+.floating-label {
+	position: relative;
+	input {
+		padding: 6px;
+		border: 1px solid;
+		font-size: $font18;
+		&:focus {
+			padding: 10px 6px 2px 6px;
+			box-shadow: 0 0 0 1px #000;
+			outline: none;
+		}
+		&:required:valid {
+			padding: 10px 6px 2px 6px;
+		}
+		&:focus + label,
+		&:required:valid + label {
+			transform: translateY(-20px);
+			font-size: $font10;
+		}
+	}
+	label {
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		color: #555;
+		transform: translateY(-50%);
+		transition: font-size .2s ease-out, transform .2s ease-out;
+	}
+}
+
+/* --------------------------------------------------
    コインアルバム
  -------------------------------------------------- */
 .coin-album { // <ul>
