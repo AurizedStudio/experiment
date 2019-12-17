@@ -938,6 +938,18 @@ select.form-control:focus::-ms-value {
   transition: font-size .2s ease-out, transform .2s ease-out;
   transition: font-size .2s ease-out, transform .2s ease-out, -webkit-transform .2s ease-out;
 }
+.filter {
+  background-color: #fff;
+  -webkit-filter: blur(5px) contrast(10);
+          filter: blur(5px) contrast(10);
+}
+.filter_inner01,
+.filter_inner02 {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 50%;
+}
 /* --------------------------------------------------
    コインアルバム
  -------------------------------------------------- */
