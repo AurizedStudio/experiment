@@ -135,3 +135,21 @@ $(function(){
 		}
 	}
 });
+
+/* ==================================================
+   if else文
+ ================================================== */
+$(function(){
+	$('.ifelse').on('click', function(){
+		let weight;
+		weight = prompt('体重は何キロ？');
+		let height;
+		height = prompt('身長は何センチ？') / 100;
+		let bmi = weight / (height * height);
+		if ((bmi >= 25) || (bmi < 18.5)) {
+			alert ('あなたは問題アリ！')
+		} else {
+			alert ('あなたは普通体重です');
+		}
+	})
+});
