@@ -152,4 +152,22 @@ $(function(){
 			alert ('あなたは普通体重です');
 		}
 	})
+	$('.switch').on('click', function(){
+		let rainfall;
+		rainfall = prompt('降水確率は？');
+		switch (true){
+			case (rainfall < 20):
+				alert('明日の予報は晴れ');
+				break;
+			case (20 <= rainfall && rainfall < 60):
+				alert('明日の予報は曇り');
+				break;
+			case (rainfall >= 60):
+				alert('明日は雨');
+				break;
+			default:
+				alert('...');
+		}
+
+	})
 });
