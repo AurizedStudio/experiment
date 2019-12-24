@@ -137,7 +137,7 @@ $(function(){
 });
 
 /* ==================================================
-   if else文
+   if else switch文
  ================================================== */
 $(function(){
 	$('.ifelse').on('click', function(){
@@ -169,5 +169,13 @@ $(function(){
 				alert('...');
 		}
 
+	})
+	$('.foreven').on('click', function(){
+		for (i=1; i<=10; i++){
+			if (i%2 !== 0){
+				continue;
+			}
+			alert(i);
+		}
 	})
 });
