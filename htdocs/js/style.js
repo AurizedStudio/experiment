@@ -137,7 +137,7 @@ $(function(){
 });
 
 /* ==================================================
-   if else switch文
+   if else switch 配列
  ================================================== */
 $(function(){
 	$('.ifelse').on('click', function(){
@@ -176,6 +176,16 @@ $(function(){
 				continue;
 			}
 			alert(i);
+		}
+	})
+	$('.array01').on('click', function(){
+		let user = {};
+		user.name = 'ヴォクトリア女王';
+		user.gender = '女性';
+		user.birth = '1819年5月24日';
+		user.zipcode = 'SW1A 1AA';
+		for (key in user){
+			alert('項目：' + key + '：' + user[key]);
 		}
 	})
 });
