@@ -188,4 +188,12 @@ $(function(){
 			alert('項目：' + key + '：' + user[key]);
 		}
 	})
+	$(function(){
+		let html = '';
+		let team = ['ウィリアム4世', 'ジョージ4世', 'ヴィクトリア女王', 'エドワード7世'];
+		team.forEach(function (team){
+			html += '<li>' + team + '</li>';
+		});
+		document.querySelector('.array02').innerHTML = html;
+	})
 });
