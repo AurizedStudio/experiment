@@ -214,3 +214,41 @@ $(function(){
 	// オブジェクトからメソッドを呼び出す。オブジェクトからメソッドを呼び出すときは、オブジェクトとメソッドを.で連結する
 	obj.helloworld();
 });
+
+/* ==================================================
+   関数
+ ================================================== */
+$(function(){
+	$('.func01').on('click', function(){
+		let checkKey;
+		let userName, weight, height;
+		let myData;
+		for (i=0; i<1000; i++){
+			checkKey = prompt('「1」を入力すると判定を開始します。それ以外はプログラムを終了します');
+			if(checkKey === '1'){
+				userName = prompt('あなたの名前を入力してください');
+				weight = prompt('あなたの体重を入力してください');
+				height = prompt('あなたの身長を入力してください') / 100;
+				myData = userName + 'さんは' + bmiCal(weight, height);
+				alert(myData);
+			} else {
+				i = 1000;
+			}
+		}
+		alert ('プログラムを終了します');
+	})
+});
+// BMIの判定
+function bmiCal(weight, height){
+	let bmi;
+	bmi = weight/(height*height);
+	let message;
+	if(bmi < 18.5){
+		message = '痩せ気味です';
+	} else if(bmi < 25){
+		message = '標準体重です';
+	} else {
+		message = '太り気味です';
+	}
+	return message;
+}
