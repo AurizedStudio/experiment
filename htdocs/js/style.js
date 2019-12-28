@@ -252,3 +252,19 @@ function bmiCal(weight, height){
 	}
 	return message;
 }
+
+/* ==================================================
+   カウンター
+ ================================================== */
+let countId = NaN, count = 0;
+function startCounter() {
+	countId = setInterval(ticktack, 1000);
+	console.log(countId);
+}
+function stopCounter() {
+	clearInterval(countId);
+}
+function ticktack() {
+	count++;
+	document.getElementById('counter_count').textContent = count;
+}
