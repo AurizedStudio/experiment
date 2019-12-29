@@ -235,7 +235,7 @@
 	input {
 		padding: 6px;
 		border: 1px solid;
-		font-size: $font18;
+		@include font-size(18);
 		&:focus {
 			padding: 10px 6px 2px 6px;
 			box-shadow: 0 0 0 1px #000;
@@ -247,7 +247,7 @@
 		&:focus + label,
 		&:required:valid + label {
 			transform: translateY(-20px);
-			font-size: $font10;
+			@include font-size(10);
 		}
 	}
 	label {
@@ -334,7 +334,7 @@
 }
 .btn-effect_txt {
 	color: #fff;
-	font-size: 2rem;
+	@include font-size(32);
 }
 /* --------------------------------------------------
    コインアルバム getJSON
@@ -710,6 +710,6 @@
  -------------------------------------------------- */
 #counter_count {
 	margin: 0;
-	font-size: $font24;
+	@include font-size(24);
 	font-weight: bold;
 }
