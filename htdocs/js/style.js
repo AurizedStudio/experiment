@@ -283,3 +283,15 @@ $('.today').on('click', function(){
 	let dWeek = dWeekName[todayWeek];
 	alert(year + '年' + month + '月' + day + '日' + '（' + dWeek + '）');
 });
+
+/* ==================================================
+   Stringオブジェクト 文字列
+ ================================================== */
+$('.string').on('click', function(){
+	let s = new String('本日は月曜日です');
+	alert(s + '　' + '\n文字数：' + s.length);
+	alert('月を金に変える' + '　' + s.replace('月', '金'));
+	alert(s + '　' + '0から始まる3つ目の文字を取り出す\n実際は４文字目' + '　' + s.charAt(3));
+	alert(s + '　' + '0から始まる3つ目の文字から6つ目までを取り出す\n実際は4文字目から6文字目' + '　' + s.substring(3,6));
+});
+
