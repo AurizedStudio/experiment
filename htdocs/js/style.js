@@ -276,7 +276,7 @@ $('.today').on('click', function(){
 	let today = new Date(); // new演算子でインスタンス化を行ってDateオブジェクトを生成
 	// 年月日を取得
 	let year = today.getFullYear();
-	let month = today.getMonth() + 1;
-	let day = today.getDate();
+	let month =　('0' + (today.getMonth() + 1)).slice(-2);
+	let day = ('0' + today.getDate()).slice(-2);
 	alert(year + '年' + month + '月' + day + '日');
 });
