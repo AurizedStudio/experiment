@@ -268,3 +268,15 @@ function ticktack() {
 	count++;
 	document.getElementById('counter_count').textContent = count;
 }
+
+/* ==================================================
+   年月日（本日）
+ ================================================== */
+$('.today').on('click', function(){
+	let today = new Date(); // new演算子でインスタンス化を行ってDateオブジェクトを生成
+	// 年月日を取得
+	let year = today.getFullYear();
+	let month = today.getMonth() + 1;
+	let day = today.getDate();
+	alert(year + '年' + month + '月' + day + '日');
+});
