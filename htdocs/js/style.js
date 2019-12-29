@@ -278,5 +278,8 @@ $('.today').on('click', function(){
 	let year = today.getFullYear();
 	let month =　('0' + (today.getMonth() + 1)).slice(-2);
 	let day = ('0' + today.getDate()).slice(-2);
-	alert(year + '年' + month + '月' + day + '日');
+	let todayWeek = today.getDay();
+	let dWeekName = ['日', '月', '火', '水', '木', '金', '土'];
+	let dWeek = dWeekName[todayWeek];
+	alert(year + '年' + month + '月' + day + '日' + '（' + dWeek + '）');
 });
