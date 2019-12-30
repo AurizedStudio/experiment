@@ -295,3 +295,19 @@ $('.string').on('click', function(){
 	alert(s + '　' + '0から始まる3つ目の文字から6つ目までを取り出す\n実際は4文字目から6文字目' + '　' + s.substring(3,6));
 });
 
+/* ==================================================
+   整数判別
+ ================================================== */
+$('.integer').on('click', function(){
+	let inputNum;
+	inputNum = prompt('数を入力してください');
+	let num = parseFloat(inputNum); // 文字列の数字を数字に変換
+	console.log(typeof num);
+	if (Number.isInteger(num)){
+		alert('整数です')
+	} else {
+		alert('整数ではありません');
+	}
+	let num02 = new Number(3);
+	console.log(typeof num02 + ':' + num02);
+});
