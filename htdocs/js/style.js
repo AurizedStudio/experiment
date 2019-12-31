@@ -323,3 +323,12 @@ function load(){
 function clickPrint(){
 	print();
 }
+
+/* ==================================================
+   現在日時表示
+ ================================================== */
+let currentDate = document.getElementsByClassName('current-date');
+console.log(currentDate[0]);
+window.setInterval(function(){ // 1s毎に実行
+	currentDate[0].innerHTML = new Date().toLocaleString();
+}, 1000);
