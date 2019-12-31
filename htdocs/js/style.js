@@ -311,3 +311,15 @@ $('.integer').on('click', function(){
 	let num02 = new Number(3);
 	console.log(typeof num02 + ':' + num02);
 });
+
+/* ==================================================
+   印刷指示
+ ================================================== */
+window.onload = load; // HTMLページのレンダリングが終わってから（読み込みが完了してから）
+function load(){
+	const ele = document.getElementsByClassName('print-btn')
+	ele[0].onclick = clickPrint;
+}
+function clickPrint(){
+	print();
+}
