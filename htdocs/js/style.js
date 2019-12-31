@@ -252,3 +252,74 @@ function bmiCal(weight, height){
 	}
 	return message;
 }
+
+/* ==================================================
+   カウンター
+ ================================================== */
+let countId = NaN, count = 0;
+function startCounter() {
+	countId = setInterval(ticktack, 1000);
+	console.log(countId);
+}
+function stopCounter() {
+	clearInterval(countId);
+}
+function ticktack() {
+	count++;
+	document.getElementById('counter_count').textContent = count;
+}
+
+/* ==================================================
+   年月日（本日）
+ ================================================== */
+$('.today').on('click', function(){
+	let today = new Date(); // new演算子でインスタンス化を行ってDateオブジェクトを生成
+	// 年月日を取得
+	let year = today.getFullYear();
+	let month =　('0' + (today.getMonth() + 1)).slice(-2);
+	let day = ('0' + today.getDate()).slice(-2);
+	let todayWeek = today.getDay();
+	let dWeekName = ['日', '月', '火', '水', '木', '金', '土'];
+	let dWeek = dWeekName[todayWeek];
+	alert(year + '年' + month + '月' + day + '日' + '（' + dWeek + '）');
+});
+
+/* ==================================================
+   Stringオブジェクト 文字列
+ ================================================== */
+$('.string').on('click', function(){
+	let s = new String('本日は月曜日です');
+	alert(s + '　' + '\n文字数：' + s.length);
+	alert('月を金に変える' + '　' + s.replace('月', '金'));
+	alert(s + '　' + '0から始まる3つ目の文字を取り出す\n実際は４文字目' + '　' + s.charAt(3));
+	alert(s + '　' + '0から始まる3つ目の文字から6つ目までを取り出す\n実際は4文字目から6文字目' + '　' + s.substring(3,6));
+});
+
+/* ==================================================
+   整数判別
+ ================================================== */
+$('.integer').on('click', function(){
+	let inputNum;
+	inputNum = prompt('数を入力してください');
+	let num = parseFloat(inputNum); // 文字列の数字を数字に変換
+	console.log(typeof num);
+	if (Number.isInteger(num)){
+		alert('整数です')
+	} else {
+		alert('整数ではありません');
+	}
+	let num02 = new Number(3);
+	console.log(typeof num02 + ':' + num02);
+});
+
+/* ==================================================
+   印刷指示
+ ================================================== */
+window.onload = load; // HTMLページのレンダリングが終わってから（読み込みが完了してから）
+function load(){
+	const ele = document.getElementsByClassName('print-btn')
+	ele[0].onclick = clickPrint;
+}
+function clickPrint(){
+	print();
+}
