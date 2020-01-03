@@ -358,3 +358,16 @@ ajax.onreadystatechange = function(){
 		}
 	}
 };
+
+/* ==================================================
+   addEventListner
+ ================================================== */
+window.onload = function(){
+	let aelBtn = document.getElementsByClassName('ael_question');
+	console.log(aelBtn[0]);
+	let aelSubmit = document.getElementsByClassName('ael_submit');
+	console.log(aelSubmit[0]);
+	aelBtn[0].addEventListener('click', function(){
+		aelSubmit[0].style.display = 'inline';
+	});
+};
