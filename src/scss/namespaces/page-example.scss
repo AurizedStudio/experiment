@@ -713,3 +713,26 @@
 	@include font-size(24);
 	font-weight: bold;
 }
+
+/* --------------------------------------------------
+   スクロールスナップ
+ -------------------------------------------------- */
+.scroll-snap {
+	scroll-snap-type: y mandatory;
+}
+.scroll-snap_child {
+	scroll-snap-align: start;
+	height: 500px;
+}
+.scroll-snap_child.scroll-snap_child--01 {
+	background-color: chocolate;
+}
+.scroll-snap_child.scroll-snap_child--02 {
+	background-color: coral;
+}
+.scroll-snap_child.scroll-snap_child--03 {
+	background-color: cornflowerblue;
+}
+.scroll-snap_child.scroll-snap_child--04 {
+	background-color: darkblue;
+}
