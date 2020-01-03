@@ -1456,6 +1456,13 @@ select.form-control:focus::-ms-value {
 .scroll-snap_child.scroll-snap_child--04 {
   background-color: darkblue;
 }
+/* --------------------------------------------------
+   Ajax Data
+ -------------------------------------------------- */
+.ajaxdata_photo img {
+  max-width: 25%;
+  height: auto;
+}
 /* ==================================================
    page-example2.html （アニメーション/Grid 確認用）
  ================================================== */

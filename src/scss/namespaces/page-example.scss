@@ -736,3 +736,13 @@
 .scroll-snap_child.scroll-snap_child--04 {
 	background-color: darkblue;
 }
+
+/* --------------------------------------------------
+   Ajax Data
+ -------------------------------------------------- */
+.ajaxdata_photo {
+	img {
+		max-width: 25%;
+		height: auto;
+	}
+}
