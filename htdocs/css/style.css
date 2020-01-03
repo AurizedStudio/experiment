@@ -1433,6 +1433,42 @@ select.form-control:focus::-ms-value {
   font-size: 1.5rem;
   font-weight: bold;
 }
+/* --------------------------------------------------
+   スクロールスナップ
+ -------------------------------------------------- */
+.scroll-snap {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+.scroll-snap_child {
+  scroll-snap-align: start;
+  height: 500px;
+}
+.scroll-snap_child.scroll-snap_child--01 {
+  background-color: chocolate;
+}
+.scroll-snap_child.scroll-snap_child--02 {
+  background-color: coral;
+}
+.scroll-snap_child.scroll-snap_child--03 {
+  background-color: cornflowerblue;
+}
+.scroll-snap_child.scroll-snap_child--04 {
+  background-color: darkblue;
+}
+/* --------------------------------------------------
+   Ajax Data
+ -------------------------------------------------- */
+.ajaxdata_photo img {
+  max-width: 25%;
+  height: auto;
+}
+/* ==================================================
+   addEventListner
+ ================================================== */
+.ael_submit {
+  display: none;
+}
 /* ==================================================
    page-example2.html （アニメーション/Grid 確認用）
  ================================================== */

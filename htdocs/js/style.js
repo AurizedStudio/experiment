@@ -323,3 +323,51 @@ function load(){
 function clickPrint(){
 	print();
 }
+
+/* ==================================================
+   現在日時表示
+ ================================================== */
+let currentDate = document.getElementsByClassName('current-date');
+console.log(currentDate[0]);
+window.setInterval(function(){ // 1s毎に実行
+	currentDate[0].innerHTML = new Date().toLocaleString();
+}, 1000);
+
+/* ==================================================
+   Ajax data
+ ================================================== */
+let ajax = new XMLHttpRequest();
+ajax.open('GET', 'https://aurized-studio.jp/ajax-data.json');
+ajax.responseType = 'json';
+ajax.send(null);
+ajax.onreadystatechange = function(){
+	if(ajax.readyState === XMLHttpRequest.DONE && ajax.status === 200){
+		for(let i=0; i<this.response.length; i++){
+			let data = this.response[i];
+			let img = document.createElement('img');
+			img.setAttribute('src', data.path);
+			img.setAttribute('alt', data.name + data.caption);
+			let caption = document.createElement('div');
+			caption.className = 'ajaxdata_caption';
+			caption.innerHTML = '<p>' + data.caption + ' - ' + data.name + '</p>';
+			let div = document.createElement('div');
+			div.className = 'ajaxdata_photo';
+			div.appendChild(img);
+			div.appendChild(caption);
+			document.getElementById('ajaxdata').appendChild(div);
+		}
+	}
+};
+
+/* ==================================================
+   addEventListner
+ ================================================== */
+window.onload = function(){
+	let aelBtn = document.getElementsByClassName('ael_question');
+	console.log(aelBtn[0]);
+	let aelSubmit = document.getElementsByClassName('ael_submit');
+	console.log(aelSubmit[0]);
+	aelBtn[0].addEventListener('click', function(){
+		aelSubmit[0].style.display = 'inline';
+	});
+};
