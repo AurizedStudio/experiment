@@ -1470,6 +1470,27 @@ select.form-control:focus::-ms-value {
   display: none;
 }
 /* ==================================================
+   カードレイアウト ワンスタイル
+ ================================================== */
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 -3.13%;
+}
+.card-layout_col {
+  flex: 0 0 30%;
+  margin: 10px 0 0 3.13%;
+  background-color: #e76863;
+  border: 1px solid #e03c4a;
+}
+.card-layout_col:first-child:nth-last-child(-n+2),
+.card-layout_col:first-child:nth-last-child(-n+2) ~ .card-layout_col {
+  flex: 0 0 46.65%;
+}
+.card-layout_col:only-child {
+  margin: 10px auto 0;
+}
+/* ==================================================
    page-example2.html （アニメーション/Grid 確認用）
  ================================================== */
 /* --------------------------------------------------
