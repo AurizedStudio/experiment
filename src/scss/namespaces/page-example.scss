@@ -775,3 +775,15 @@
 		margin: 10px auto 0;
 	}
 }
+
+/* ==================================================
+   画面幅より狭い要素の中の要素を画面幅一杯に
+ ================================================== */
+.item-wide {
+	// position: relative;
+	// left: 50%;
+	// transform: translateX(-50%);
+	width: 100vw;
+	margin: 0 calc(50% - 50vw);
+	background-color: #000;
+}
