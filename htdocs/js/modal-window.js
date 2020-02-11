@@ -55,7 +55,10 @@ $(document).ready(function() {
     });
     jQuery('#modalCloseButton').click(function(e) {
         hideModal();
-    });
+		});
+		jQuery('#modalOverlay').click(function(e){
+			hideModal();
+		})
     jQuery('#acc-modal').keydown(function(event) {
         trapTabKey($(this), event);
     })
