@@ -753,3 +753,37 @@
 .ael_submit {
 	display: none;
 }
+
+/* ==================================================
+   カードレイアウト ワンスタイル
+ ================================================== */
+.card-layout {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 0 -3.13%; // ie9無視なら3.33
+}
+.card-layout_col {
+	flex: 0 0 30%;
+	margin: 10px 0 0 3.13%; // 3.33
+	background-color: #e76863;
+	border: 1px solid darken(#e76873, 10%);
+	&:first-child:nth-last-child(-n+2),
+	&:first-child:nth-last-child(-n+2) ~ .card-layout_col {
+		flex: 0 0 46.65%; // 46.67
+	}
+	&:only-child {
+		margin: 10px auto 0;
+	}
+}
+
+/* ==================================================
+   画面幅より狭い要素の中の要素を画面幅一杯に
+ ================================================== */
+.item-wide {
+	// position: relative;
+	// left: 50%;
+	// transform: translateX(-50%);
+	width: 100vw;
+	margin: 0 calc(50% - 50vw);
+	background-color: #000;
+}

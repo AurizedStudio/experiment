@@ -133,6 +133,35 @@
 		<a href="#modal01" aria-label="Close Modal" class="is-modal-close02">Close</a>
 	</div>
 </div>
+<h2>モーダル(Accessible)</h2>
+<button id="startModal">view the modal window</button>
+<div id="acc-modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+	<div role="document">
+		<div id="modalDescription" class="screen-reader-offscreen">Beginning of dialog window. It begins with a heading 1 called &quot;Registration Form&quot;. Escape will cancel and close the window. This form does not collect any actual information.</div>
+		<h1 id="modalTitle">Registration Form</h1>
+		<p>These are the onscreen instructions that are not attached explicitly to a focusable element. Can screen reader users read this text with the virtual cursor?</p>
+		<form name="form1" onSubmit="return false;">
+			<p>
+				<label for="firstName">First Name</label>
+				<input type="text" name="firstName" id="firstName">
+			</p>
+			<p>
+				<label for="lastName">Last Name</label>
+				<input type="text" name="lastName" id="lastName">
+			</p>
+			<p>
+				<label for="email">Email Address</label>
+				<input type="text" name="email" id="email">
+			</p>
+			<p>
+				<input type="button" name="button" id="enter" value="Submit">
+				<input type="button" name="cancelButton" id="cancelButton" value="Cancel">
+			</p>
+			<button id="modalCloseButton" class="modalCloseButton" title="Close registration form"><img id="cancel" src="/img/x.png" alt="close the registration form"></button>
+		</form>
+	</div>
+</div>
+<div id="modalOverlay" tabindex="-1"></div>
 <h2>ボタン</h2>
 <button type="button" class="btn-effect">
 	<span class="btn-effect_effect"></span>
@@ -337,6 +366,29 @@
 		<input class="ael_submit" type="submit" value="質問を送信する">
 	</form>
 </div>
+<h2>カードレイアウト ワンスタイル</h2>
+<div class="card-layout">
+	<div class="card-layout_col"><span>Card</span></div>
+</div>
+<div class="card-layout">
+	<div class="card-layout_col"><span>Card</span></div>
+	<div class="card-layout_col"><span>Card</span></div>
+</div>
+<div class="card-layout">
+	<div class="card-layout_col"><span>Card</span></div>
+	<div class="card-layout_col"><span>Card</span></div>
+	<div class="card-layout_col"><span>Card</span></div>
+	<div class="card-layout_col"><span>Card</span></div>
+</div>
+<div class="card-layout">
+	<div class="card-layout_col"><span>Card</span></div>
+	<div class="card-layout_col"><span>Card</span></div>
+	<div class="card-layout_col"><span>Card</span></div>
+	<div class="card-layout_col"><span>Card</span></div>
+	<div class="card-layout_col"><span>Card</span></div>
+</div>
+<h2>画面幅より狭い要素の中の要素を画面幅一杯に</h2>
+<div class="item-wide">item-wide</div>
 <h2>リンクアイコン</h2>
 <ul class="link-icon">
 	<li><a href="4321.pdf">PDFリンク<br>PDFPDFPDFPDFPDF</a></li>
@@ -352,6 +404,7 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/ScrollMagic.js"></script>
 <script src="/js/debug.addIndicators.js"></script>
+<script src="/js/modal-window.js"></script>
 <script src="/js/style.js"></script>
 </body>
 </html>

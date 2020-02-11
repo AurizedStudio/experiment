@@ -653,6 +653,69 @@ select.form-control:focus::-ms-value {
   height: 50px;
   overflow: scroll;
 }
+#modalOverlay {
+  width: 100%;
+  height: 100%;
+  z-index: 1020;
+  /* places the modal overlay between the main page and the modal dialog*/
+  background-color: #000;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+#modalOverlay:hover {
+  cursor: pointer;
+}
+#acc-modal {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border: thin #000 solid;
+  background-color: #fff;
+  z-index: 1030;
+  /* places the modal dialog on top of everything else */
+  position: fixed;
+  top: 5%;
+  width: 94%;
+  display: none;
+}
+@media (min-width: 768px) {
+  #acc-modal {
+    top: 10%;
+    left: 10%;
+    width: 80%;
+  }
+}
+@media (min-width: 980px) {
+  #acc-modal {
+    top: 25%;
+    left: 25%;
+    width: 50%;
+  }
+}
+#modal h1 {
+  text-align: center;
+}
+.modalCloseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 25px;
+}
+.modalCloseButton img {
+  border: 0;
+}
+.screen-reader-offscreen {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
 /* ==================================================
    page-example.html
  ================================================== */
@@ -1468,6 +1531,35 @@ select.form-control:focus::-ms-value {
  ================================================== */
 .ael_submit {
   display: none;
+}
+/* ==================================================
+   カードレイアウト ワンスタイル
+ ================================================== */
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 -3.13%;
+}
+.card-layout_col {
+  flex: 0 0 30%;
+  margin: 10px 0 0 3.13%;
+  background-color: #e76863;
+  border: 1px solid #e03c4a;
+}
+.card-layout_col:first-child:nth-last-child(-n+2),
+.card-layout_col:first-child:nth-last-child(-n+2) ~ .card-layout_col {
+  flex: 0 0 46.65%;
+}
+.card-layout_col:only-child {
+  margin: 10px auto 0;
+}
+/* ==================================================
+   画面幅より狭い要素の中の要素を画面幅一杯に
+ ================================================== */
+.item-wide {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  background-color: #000;
 }
 /* ==================================================
    page-example2.html （アニメーション/Grid 確認用）
