@@ -1562,6 +1562,56 @@ select.form-control:focus::-ms-value {
   background-color: #000;
 }
 /* ==================================================
+   CSSでコンテンツ依存
+ ================================================== */
+.inner-d-min {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  background-color: #000;
+  color: #fff;
+}
+.inner-d-max {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #000;
+  color: #fff;
+}
+.inner-d-fit {
+  max-width: 600px;
+  background-color: #c5c5c5;
+}
+.inner-d-fit_inner {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #000;
+  color: #fff;
+}
+.inner-d-fit-img {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.inner-d-fit-img_fig {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #000;
+}
+.inner-d-fit-img_img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.inner-d-fit-img_exp {
+  color: #fff;
+}
+/* ==================================================
    page-example2.html （アニメーション/Grid 確認用）
  ================================================== */
 /* --------------------------------------------------
