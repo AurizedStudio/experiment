@@ -1016,52 +1016,44 @@ select.form-control:focus::-ms-value {
 /* --------------------------------------------------
    コインアルバム
  -------------------------------------------------- */
-.coin-album {
+.coin-album01 {
   padding-left: 0;
   list-style: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 24px 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto 24px auto;
+  grid-template-rows: repeat(2, auto);
+  -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   gap: 24px;
 }
-.coin-album > *:nth-child(1) {
+.coin-album01 > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
 }
-.coin-album > *:nth-child(2) {
+.coin-album01 > *:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
 }
-.coin-album > *:nth-child(3) {
+.coin-album01 > *:nth-child(3) {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
 }
-.coin-album > *:nth-child(4) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 7;
-}
-.coin-album > *:nth-child(5) {
+.coin-album01 > *:nth-child(4) {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
 }
-.coin-album > *:nth-child(6) {
+.coin-album01 > *:nth-child(5) {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
 }
-.coin-album > *:nth-child(7) {
+.coin-album01 > *:nth-child(6) {
   -ms-grid-row: 3;
   -ms-grid-column: 5;
 }
-.coin-album > *:nth-child(8) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 7;
-}
-.coin-album img {
+.coin-album01 img {
   max-width: 100%;
   height: auto;
 }
@@ -1074,6 +1066,21 @@ select.form-control:focus::-ms-value {
   gap: 10px;
 }
 .coin-album02 img {
+  max-width: 100%;
+  height: auto;
+}
+.coin-album03 {
+  padding-left: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+      grid-template: repeat(1, auto)/repeat(3, 1fr);
+  gap: 10px;
+  border: 1px solid #5f040f;
+}
+.coin-album03 img {
   max-width: 100%;
   height: auto;
 }
@@ -1560,6 +1567,56 @@ select.form-control:focus::-ms-value {
   width: 100vw;
   margin: 0 calc(50% - 50vw);
   background-color: #000;
+}
+/* ==================================================
+   CSSでコンテンツ依存
+ ================================================== */
+.inner-d-min {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  background-color: #000;
+  color: #fff;
+}
+.inner-d-max {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #000;
+  color: #fff;
+}
+.inner-d-fit {
+  max-width: 600px;
+  background-color: #c5c5c5;
+}
+.inner-d-fit_inner {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #000;
+  color: #fff;
+}
+.inner-d-fit-img {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.inner-d-fit-img_fig {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #000;
+}
+.inner-d-fit-img_img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.inner-d-fit-img_exp {
+  color: #fff;
 }
 /* ==================================================
    page-example2.html （アニメーション/Grid 確認用）

@@ -90,17 +90,6 @@
   <div class="tab-content_pane" id="messages" role="tabpanel" aria-labelledby="nav_message-tab">Messages<br>message<br>message</div>
   <div class="tab-content_pane" id="settings" role="tabpanel" aria-labelledby="nav_settings-tab">Settings<br>settings<br>settings<br>setting</div>
 </div>
-<h2>Grid</h2>
-<ul class="coin-album">
-	<li class="coin-album_item"><img src="/img/09061152_5b90965639e40.png" alt=""></li>
-	<li class="coin-album_item"><img src="/img/09061152_5b90966435647.png" alt=""></li>
-	<li class="coin-album_item"><img src="/img/09061405_5b90b5a8372e2.png" alt=""></li>
-	<li class="coin-album_item"><img src="/img/09061405_5b90b59a75b0d.png" alt=""></li>
-	<li class="coin-album_item"><img src="/img/10171144_5da7d5a82a4d4.png" alt=""></li>
-	<li class="coin-album_item"><img src="/img/10171144_5da7d5984ab0d.png" alt=""></li>
-	<li class="coin-album_item"><img src="/img/10171220_5da7de0f89b4d.png" alt=""></li>
-	<li class="coin-album_item"><img src="/img/10171221_5da7de1e09365.png" alt=""></li>
-</ul>
 <h2>モーダル</h2>
 <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">モーダル起動</button>
 <!-- Modal -->
@@ -167,8 +156,30 @@
 	<span class="btn-effect_effect"></span>
 	<span class="btn-effect_txt">More</span>
 </button>
-<h2>Grid</h2>
+<h2>Grid01</h2>
+<ul class="coin-album01">
+	<li class="coin-album_item"><img src="/img/09061152_5b90965639e40.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061152_5b90966435647.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061405_5b90b5a8372e2.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061405_5b90b59a75b0d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171144_5da7d5a82a4d4.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171144_5da7d5984ab0d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171220_5da7de0f89b4d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171221_5da7de1e09365.png" alt=""></li>
+</ul>
+<h2>Grid02</h2>
 <ul class="coin-album02">
+	<li class="coin-album_item"><img src="/img/09061152_5b90965639e40.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061152_5b90966435647.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061405_5b90b5a8372e2.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/09061405_5b90b59a75b0d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171144_5da7d5a82a4d4.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171144_5da7d5984ab0d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171220_5da7de0f89b4d.png" alt=""></li>
+	<li class="coin-album_item"><img src="/img/10171221_5da7de1e09365.png" alt=""></li>
+</ul>
+<h2>Grid03</h2>
+<ul class="coin-album03">
 	<li class="coin-album_item"><img src="/img/09061152_5b90965639e40.png" alt=""></li>
 	<li class="coin-album_item"><img src="/img/09061152_5b90966435647.png" alt=""></li>
 	<li class="coin-album_item"><img src="/img/09061405_5b90b5a8372e2.png" alt=""></li>
@@ -389,6 +400,30 @@
 </div>
 <h2>画面幅より狭い要素の中の要素を画面幅一杯に</h2>
 <div class="item-wide">item-wide</div>
+<h2>CSSでコンテンツ依存 キャプション文字は画像幅よりも短くする。長いとoverflowする</h2>
+<p class="inner-d-min">コンテンツ依存</p>
+<p class="inner-d-min">コンテンツ。私はコンテンツになる。</p>
+<p class="inner-d-min">I am a contents.</p>
+<p class="inner-d-max">コンテンツ依存</p>
+<p class="inner-d-max">コンテンツ。私はコンテンツになる。</p>
+<p class="inner-d-max">I am a contents.</p>
+<div class="inner-d-fit">
+	<p class="inner-d-fit_inner">コンテンツ。私はコンテンツになる。コンテンツ。私はコンテンツになる。</p>
+	<p class="inner-d-fit_inner">I am a contents. I am a contents. I am a contents.</p>
+</div>
+<div class="inner-d-fit-img">
+	<figure class="inner-d-fit-img_fig">
+		<img class="inner-d-fit-img_img" src="/img/georgeIV.jpg" alt="画像：ジョージ4世">
+		<figcaption class="inner-d-fit-img_exp">ジョージ4世 8/12/1762 - 6/26/1830 <br>rev Britannia, Hibernia and Scotia offer the crown</figcaption>
+	</figure>
+</div>
+<h2>最終手段としてのaria-labelledby属性</h2>
+<h3 id="aboutA11y">アクセシビリティとは</h3>
+<p>さまざまな利用者が、さまざまなデバイスを使い、さまざまな状況でウェブを使うようになった今、あらゆるウェブコンテンツにとってアクセシビリティは必要不可欠な品質を言えます。<a href="#" id="link01" aria-labelledby="aboutA11y link01">続きを読む</a></p>
+<h2>aria-describedby属性で説明文も関連付け</h2>
+<label for="tel">電話番号</label>
+<input type="text" id="tel" aria-describedby="hint">
+<p id="hind">ハイフンを入れて入力してください。</p>
 <h2>リンクアイコン</h2>
 <ul class="link-icon">
 	<li><a href="4321.pdf">PDFリンク<br>PDFPDFPDFPDFPDF</a></li>
