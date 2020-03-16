@@ -317,7 +317,7 @@
 /* --------------------------------------------------
    ボタン
  -------------------------------------------------- */
-.btn-effect { // <button>
+.btn01-effect { // <button>
 	display: inline-block;
 	position: relative;
 	width: 230px;
@@ -329,12 +329,12 @@
 	overflow: hidden;
 	&:hover,
 	&:active {
-		.btn-effect_effect {
+		.btn01-effect_effect {
 			transform: translateX(0);
 		}
 	}
 }
-.btn-effect_effect {
+.btn01-effect_effect {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -345,10 +345,46 @@
 	transform: translateX(-100%);
 	transition: transform .3s ease-out;
 }
-.btn-effect_txt {
+.btn01-effect_txt {
 	color: #fff;
 	@include font-size(32);
 }
+.btn02-effect {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 48px;
+	overflow: hidden;
+	background-color: #a51021;
+	border: none;
+	span {
+		position: relative;
+		color: #fff;
+		z-index: 1;
+	}
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		background-color: darken(#a51021,10%);
+		transform: skewX(-20deg);
+	//	opacity: 0;
+		transition: .3s ease-out;
+		z-index: 0;
+	}
+	&:hover::before,
+	&:active::before {
+		height: 100%;
+	//	opacity: 1;
+	}
+}
+
 /* --------------------------------------------------
    コインアルバム getJSON
  -------------------------------------------------- */

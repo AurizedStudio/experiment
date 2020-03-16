@@ -1087,7 +1087,7 @@ select.form-control:focus::-ms-value {
 /* --------------------------------------------------
    ボタン
  -------------------------------------------------- */
-.btn-effect {
+.btn01-effect {
   display: inline-block;
   position: relative;
   width: 230px;
@@ -1098,11 +1098,11 @@ select.form-control:focus::-ms-value {
   border-radius: 4px;
   overflow: hidden;
 }
-.btn-effect:hover .btn-effect_effect, .btn-effect:active .btn-effect_effect {
+.btn01-effect:hover .btn01-effect_effect, .btn01-effect:active .btn01-effect_effect {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-.btn-effect_effect {
+.btn01-effect_effect {
   display: block;
   position: absolute;
   top: 0;
@@ -1116,9 +1116,42 @@ select.form-control:focus::-ms-value {
   transition: transform .3s ease-out;
   transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 }
-.btn-effect_txt {
+.btn01-effect_txt {
   color: #fff;
   font-size: 2rem;
+}
+.btn02-effect {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  overflow: hidden;
+  background-color: #a51021;
+  border: none;
+}
+.btn02-effect span {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+.btn02-effect::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #770b18;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  transition: .3s ease-out;
+  z-index: 0;
+}
+.btn02-effect:hover::before, .btn02-effect:active::before {
+  height: 100%;
 }
 /* --------------------------------------------------
    コインアルバム getJSON
