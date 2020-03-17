@@ -1247,6 +1247,21 @@ select.form-control:focus::-ms-value {
   margin: 0 0 0 1em;
 }
 /* --------------------------------------------------
+   flexレスポンシブ対応
+ -------------------------------------------------- */
+.flex-resp {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #888;
+}
+.flex-resp_item {
+  flex: 1 1 100px;
+  margin: 4px;
+  padding: 10px;
+  background-color: #fb8c00;
+  color: #fff;
+}
+/* --------------------------------------------------
    アコーディオン
  -------------------------------------------------- */
 .acc_cont {
