@@ -233,6 +233,7 @@
 .floating-label {
 	position: relative;
 	input {
+		width: 100%;
 		padding: 6px;
 		border: 1px solid;
 		@include font-size(18);
@@ -248,6 +249,9 @@
 		&:required:valid + label {
 			transform: translateY(-20px);
 			@include font-size(10);
+		}
+		@include media-tab {
+			width: 400px;
 		}
 	}
 	label {
@@ -523,7 +527,10 @@
  -------------------------------------------------- */
 .two-link {
 	position: relative;
-	padding: 0 400px 0 0;
+	padding: 0 40% 0 0;
+	@include media-tab {
+		padding: 0 400px 0 0;
+	}
 	p {
 		margin: 0;
 	}
@@ -535,12 +542,15 @@
 		display: inline-block;
 		position: absolute;
 		top: 20px;
-		right: 40px;
+		right: 20px;
 		width: 100px;
 		height: 100px;
 		background-color: currentColor;
 		opacity: .85;
 		transition: transform .5s, opacity .5s;
+		@include media-tab {
+			right: 40px;
+		}
 	}
 	&:hover:after {
 		transform: scale(1.2);
@@ -555,12 +565,15 @@
 		display: inline-block;
 		position: absolute;
 		top: 40px;
-		right: 100px;
+		right: 10px;
 		width: 100px;
 		height: 100px;
 		background-color: currentColor;
 		opacity: .85;
 		transition: transform .5s, opacity .5s;
+		@include media-tab {
+			right: 100px;
+		}
 	}
 	&:hover:after {
 		transform: scale(1.2);
@@ -625,8 +638,11 @@
 	margin: 0;
 	text-align: center;
 	img {
-		max-width: 310px;
+		width: 50%;
 		height: auto;
+		@include media-tab {
+			max-width: 310px;
+		}
 	}
 }
 .card_exp {
@@ -799,6 +815,12 @@
 /* ==================================================
    addEventListner
  ================================================== */
+.ael_text {
+	width: 100%;
+	@include media-tab {
+		max-width: 300px;
+	}
+}
 .ael_submit {
 	display: none;
 }
@@ -878,4 +900,14 @@
 }
 .inner-d-fit-img_exp { // figcaption
 	color: #fff;
+}
+
+/* ==================================================
+   aria-describedby属性で説明文も関連付け
+ ================================================== */
+.hint_input {
+	width: 100%;
+	@include media-tab {
+		width: 400px;
+	}
 }

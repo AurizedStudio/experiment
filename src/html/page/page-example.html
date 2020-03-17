@@ -28,8 +28,8 @@
 
 <h2>Floating label</h2>
 <div class="floating-label">
-	<input type="text" id="email" required>
-	<label for="email">Email</label>
+	<input type="text" id="floating-label_email" required>
+	<label for="floating-label_email">Email</label>
 </div>
 
 <h2>filter</h2>
@@ -381,7 +381,7 @@
 <div class="ael">
 	<form action="">
 		<button class="ael_question" type="button">質問をしたい！</button>
-		<textarea name="textarea" cols="30" rows="10"></textarea>
+		<textarea name="textarea" rows="10" class="ael_text"></textarea>
 		<input class="ael_submit" type="submit" value="質問を送信する">
 	</form>
 </div>
@@ -434,9 +434,11 @@
 <p>さまざまな利用者が、さまざまなデバイスを使い、さまざまな状況でウェブを使うようになった今、あらゆるウェブコンテンツにとってアクセシビリティは必要不可欠な品質を言えます。<a href="#" id="link01" aria-labelledby="aboutA11y link01">続きを読む</a></p>
 
 <h2>aria-describedby属性で説明文も関連付け</h2>
-<label for="tel">電話番号</label>
-<input type="text" id="tel" aria-describedby="hint">
-<p id="hind">ハイフンを入れて入力してください。</p>
+<div class="hint">
+	<label for="tel">電話番号</label>
+	<input type="text" id="tel" class="hint_input" aria-describedby="hint">
+	<p id="hind">ハイフンを入れて入力してください。</p>
+</div>
 
 <h2>リンクアイコン</h2>
 <ul class="link-icon">
