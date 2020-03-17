@@ -60,8 +60,8 @@
 <p class="link-current"><a href="#">リンクカラー</a></p>
 <h2>Floating label</h2>
 <div class="floating-label">
-	<input type="text" id="email" required>
-	<label for="email">Email</label>
+	<input type="text" id="floating-label_email" required>
+	<label for="floating-label_email">Email</label>
 </div>
 <h2>filter</h2>
 <div class="filter">
@@ -151,11 +151,13 @@
 	</div>
 </div>
 <div id="modalOverlay" tabindex="-1"></div>
-<h2>ボタン</h2>
-<button type="button" class="btn-effect">
-	<span class="btn-effect_effect"></span>
-	<span class="btn-effect_txt">More</span>
+<h2>ボタン01</h2>
+<button type="button" class="btn01-effect">
+	<span class="btn01-effect_effect"></span>
+	<span class="btn01-effect_txt">More</span>
 </button>
+<h2>ボタン02</h2>
+<button type="button" class="btn02-effect"><span>Learn</span></button>
 <h2>Grid01</h2>
 <ul class="coin-album01">
 	<li class="coin-album_item"><img src="/img/09061152_5b90965639e40.png" alt=""></li>
@@ -283,6 +285,14 @@
 		</figure>
 	</li>
 </ul>
+<h2>flexレスポンシブ対応</h2>
+<div class="flex-resp">
+	<div class="flex-resp_item">item01</div>
+	<div class="flex-resp_item">item02</div>
+	<div class="flex-resp_item">item03</div>
+	<div class="flex-resp_item">item04</div>
+	<div class="flex-resp_item">item05</div>
+</div>
 <h2>斜めベタ背景</h2>
 <div class="diagonal"></div>
 <h2>ページトップへ戻るボタン</h2>
@@ -373,7 +383,7 @@
 <div class="ael">
 	<form action="">
 		<button class="ael_question" type="button">質問をしたい！</button>
-		<textarea name="textarea" cols="30" rows="10"></textarea>
+		<textarea name="textarea" rows="10" class="ael_text"></textarea>
 		<input class="ael_submit" type="submit" value="質問を送信する">
 	</form>
 </div>
@@ -421,9 +431,11 @@
 <h3 id="aboutA11y">アクセシビリティとは</h3>
 <p>さまざまな利用者が、さまざまなデバイスを使い、さまざまな状況でウェブを使うようになった今、あらゆるウェブコンテンツにとってアクセシビリティは必要不可欠な品質を言えます。<a href="#" id="link01" aria-labelledby="aboutA11y link01">続きを読む</a></p>
 <h2>aria-describedby属性で説明文も関連付け</h2>
-<label for="tel">電話番号</label>
-<input type="text" id="tel" aria-describedby="hint">
-<p id="hind">ハイフンを入れて入力してください。</p>
+<div class="hint">
+	<label for="tel">電話番号</label>
+	<input type="text" id="tel" class="hint_input" aria-describedby="hint">
+	<p id="hind">ハイフンを入れて入力してください。</p>
+</div>
 <h2>リンクアイコン</h2>
 <ul class="link-icon">
 	<li><a href="4321.pdf">PDFリンク<br>PDFPDFPDFPDFPDF</a></li>

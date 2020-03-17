@@ -972,6 +972,7 @@ select.form-control:focus::-ms-value {
   position: relative;
 }
 .floating-label input {
+  width: 100%;
   padding: 6px;
   border: 1px solid;
   font-size: 1.125rem;
@@ -989,6 +990,11 @@ select.form-control:focus::-ms-value {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
   font-size: 0.625rem;
+}
+@media (min-width: 768px) {
+  .floating-label input {
+    width: 400px;
+  }
 }
 .floating-label label {
   position: absolute;
@@ -1087,7 +1093,7 @@ select.form-control:focus::-ms-value {
 /* --------------------------------------------------
    ボタン
  -------------------------------------------------- */
-.btn-effect {
+.btn01-effect {
   display: inline-block;
   position: relative;
   width: 230px;
@@ -1098,11 +1104,11 @@ select.form-control:focus::-ms-value {
   border-radius: 4px;
   overflow: hidden;
 }
-.btn-effect:hover .btn-effect_effect, .btn-effect:active .btn-effect_effect {
+.btn01-effect:hover .btn01-effect_effect, .btn01-effect:active .btn01-effect_effect {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-.btn-effect_effect {
+.btn01-effect_effect {
   display: block;
   position: absolute;
   top: 0;
@@ -1116,9 +1122,42 @@ select.form-control:focus::-ms-value {
   transition: transform .3s ease-out;
   transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 }
-.btn-effect_txt {
+.btn01-effect_txt {
   color: #fff;
   font-size: 2rem;
+}
+.btn02-effect {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  overflow: hidden;
+  background-color: #a51021;
+  border: none;
+}
+.btn02-effect span {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+.btn02-effect::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #770b18;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  transition: .3s ease-out;
+  z-index: 0;
+}
+.btn02-effect:hover::before, .btn02-effect:active::before {
+  height: 100%;
 }
 /* --------------------------------------------------
    コインアルバム getJSON
@@ -1208,6 +1247,21 @@ select.form-control:focus::-ms-value {
   margin: 0 0 0 1em;
 }
 /* --------------------------------------------------
+   flexレスポンシブ対応
+ -------------------------------------------------- */
+.flex-resp {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #888;
+}
+.flex-resp_item {
+  flex: 1 1 100px;
+  margin: 4px;
+  padding: 10px;
+  background-color: #fb8c00;
+  color: #fff;
+}
+/* --------------------------------------------------
    アコーディオン
  -------------------------------------------------- */
 .acc_cont {
@@ -1261,7 +1315,12 @@ select.form-control:focus::-ms-value {
  -------------------------------------------------- */
 .two-link {
   position: relative;
-  padding: 0 400px 0 0;
+  padding: 0 40% 0 0;
+}
+@media (min-width: 768px) {
+  .two-link {
+    padding: 0 400px 0 0;
+  }
 }
 .two-link p {
   margin: 0;
@@ -1274,7 +1333,7 @@ select.form-control:focus::-ms-value {
   display: inline-block;
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 20px;
   width: 100px;
   height: 100px;
   background-color: currentColor;
@@ -1282,6 +1341,11 @@ select.form-control:focus::-ms-value {
   transition: opacity .5s, -webkit-transform .5s;
   transition: transform .5s, opacity .5s;
   transition: transform .5s, opacity .5s, -webkit-transform .5s;
+}
+@media (min-width: 768px) {
+  .two-link_link01:after {
+    right: 40px;
+  }
 }
 .two-link_link01:hover:after {
   -webkit-transform: scale(1.2);
@@ -1298,7 +1362,7 @@ select.form-control:focus::-ms-value {
   display: inline-block;
   position: absolute;
   top: 40px;
-  right: 100px;
+  right: 10px;
   width: 100px;
   height: 100px;
   background-color: currentColor;
@@ -1306,6 +1370,11 @@ select.form-control:focus::-ms-value {
   transition: opacity .5s, -webkit-transform .5s;
   transition: transform .5s, opacity .5s;
   transition: transform .5s, opacity .5s, -webkit-transform .5s;
+}
+@media (min-width: 768px) {
+  .two-link_link02:after {
+    right: 100px;
+  }
 }
 .two-link_link02:hover:after {
   -webkit-transform: scale(1.2);
@@ -1381,8 +1450,13 @@ select.form-control:focus::-ms-value {
   text-align: center;
 }
 .card_fig img {
-  max-width: 310px;
+  width: 50%;
   height: auto;
+}
+@media (min-width: 768px) {
+  .card_fig img {
+    max-width: 310px;
+  }
 }
 .card_more {
   display: block;
@@ -1536,6 +1610,14 @@ select.form-control:focus::-ms-value {
 /* ==================================================
    addEventListner
  ================================================== */
+.ael_text {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .ael_text {
+    max-width: 300px;
+  }
+}
 .ael_submit {
   display: none;
 }
@@ -1617,6 +1699,17 @@ select.form-control:focus::-ms-value {
 }
 .inner-d-fit-img_exp {
   color: #fff;
+}
+/* ==================================================
+   aria-describedby属性で説明文も関連付け
+ ================================================== */
+.hint_input {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hint_input {
+    width: 400px;
+  }
 }
 /* ==================================================
    page-example2.html （アニメーション/Grid 確認用）

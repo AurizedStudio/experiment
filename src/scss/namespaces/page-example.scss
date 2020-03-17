@@ -233,6 +233,7 @@
 .floating-label {
 	position: relative;
 	input {
+		width: 100%;
 		padding: 6px;
 		border: 1px solid;
 		@include font-size(18);
@@ -248,6 +249,9 @@
 		&:required:valid + label {
 			transform: translateY(-20px);
 			@include font-size(10);
+		}
+		@include media-tab {
+			width: 400px;
 		}
 	}
 	label {
@@ -317,7 +321,7 @@
 /* --------------------------------------------------
    ボタン
  -------------------------------------------------- */
-.btn-effect { // <button>
+.btn01-effect { // <button>
 	display: inline-block;
 	position: relative;
 	width: 230px;
@@ -329,12 +333,12 @@
 	overflow: hidden;
 	&:hover,
 	&:active {
-		.btn-effect_effect {
+		.btn01-effect_effect {
 			transform: translateX(0);
 		}
 	}
 }
-.btn-effect_effect {
+.btn01-effect_effect {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -345,10 +349,46 @@
 	transform: translateX(-100%);
 	transition: transform .3s ease-out;
 }
-.btn-effect_txt {
+.btn01-effect_txt {
 	color: #fff;
 	@include font-size(32);
 }
+.btn02-effect {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 48px;
+	overflow: hidden;
+	background-color: #a51021;
+	border: none;
+	span {
+		position: relative;
+		color: #fff;
+		z-index: 1;
+	}
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		background-color: darken(#a51021,10%);
+		transform: skewX(-20deg);
+	//	opacity: 0;
+		transition: .3s ease-out;
+		z-index: 0;
+	}
+	&:hover::before,
+	&:active::before {
+		height: 100%;
+	//	opacity: 1;
+	}
+}
+
 /* --------------------------------------------------
    コインアルバム getJSON
  -------------------------------------------------- */
@@ -431,6 +471,22 @@
 	margin: 0 0 0 1em;
 }
 /* --------------------------------------------------
+   flexレスポンシブ対応
+ -------------------------------------------------- */
+.flex-resp {
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid #888;
+}
+.flex-resp_item {
+	flex: 1 1 100px;
+	margin: 4px;
+	padding: 10px;
+	background-color: #fb8c00;
+	color: #fff;
+}
+
+/* --------------------------------------------------
    アコーディオン
  -------------------------------------------------- */
 .acc {
@@ -487,7 +543,10 @@
  -------------------------------------------------- */
 .two-link {
 	position: relative;
-	padding: 0 400px 0 0;
+	padding: 0 40% 0 0;
+	@include media-tab {
+		padding: 0 400px 0 0;
+	}
 	p {
 		margin: 0;
 	}
@@ -499,12 +558,15 @@
 		display: inline-block;
 		position: absolute;
 		top: 20px;
-		right: 40px;
+		right: 20px;
 		width: 100px;
 		height: 100px;
 		background-color: currentColor;
 		opacity: .85;
 		transition: transform .5s, opacity .5s;
+		@include media-tab {
+			right: 40px;
+		}
 	}
 	&:hover:after {
 		transform: scale(1.2);
@@ -519,12 +581,15 @@
 		display: inline-block;
 		position: absolute;
 		top: 40px;
-		right: 100px;
+		right: 10px;
 		width: 100px;
 		height: 100px;
 		background-color: currentColor;
 		opacity: .85;
 		transition: transform .5s, opacity .5s;
+		@include media-tab {
+			right: 100px;
+		}
 	}
 	&:hover:after {
 		transform: scale(1.2);
@@ -589,8 +654,11 @@
 	margin: 0;
 	text-align: center;
 	img {
-		max-width: 310px;
+		width: 50%;
 		height: auto;
+		@include media-tab {
+			max-width: 310px;
+		}
 	}
 }
 .card_exp {
@@ -763,6 +831,12 @@
 /* ==================================================
    addEventListner
  ================================================== */
+.ael_text {
+	width: 100%;
+	@include media-tab {
+		max-width: 300px;
+	}
+}
 .ael_submit {
 	display: none;
 }
@@ -842,4 +916,14 @@
 }
 .inner-d-fit-img_exp { // figcaption
 	color: #fff;
+}
+
+/* ==================================================
+   aria-describedby属性で説明文も関連付け
+ ================================================== */
+.hint_input {
+	width: 100%;
+	@include media-tab {
+		width: 400px;
+	}
 }
