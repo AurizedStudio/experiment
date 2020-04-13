@@ -1090,6 +1090,61 @@ select.form-control:focus::-ms-value {
   max-width: 100%;
   height: auto;
 }
+.coin-album04 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 10px auto 10px auto;
+  grid-template-rows: repeat(3, auto);
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.coin-album04 > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.coin-album04 > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.coin-album04 > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.coin-album04 > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.coin-album04 > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.coin-album04 > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+.coin-album04 > *:nth-child(7) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+.coin-album04 > *:nth-child(8) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+.coin-album04 > *:nth-child(9) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+.coin-album04 img {
+  width: 100%;
+  height: auto;
+}
+.coin-album04_item {
+  padding-left: 0;
+  list-style: none;
+}
 /* --------------------------------------------------
    ボタン
  -------------------------------------------------- */
